@@ -151,8 +151,8 @@ def rev_path(path):
     path.reverse()
 
 def make_map(path):
-    amap = [[1 for i in range(19)] for i in range(19)]
-    quords = [17,9]
+    amap = [[1 for i in range(17)] for i in range(17)]
+    quords = [15,7]
     for i in path:
         amap[quords[0]][quords[1]] = 0
         if(i[3] != 0):
@@ -169,10 +169,11 @@ def make_map(path):
                 amap[quords[0]][quords[1] + 1] = 0
                 quords = [quords[0],quords[1] + 2]
 
-    amap[17][9] = 8
+    amap[15][7] = 8
     for i in amap:
         brain.print(i)
         brain.new_line()
+
 
 
 
