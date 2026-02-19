@@ -160,15 +160,16 @@ def make_map(path):
                 amap[quords[0] + 1][quords[1]] = 0
                 quords = [quords[0] + 2,quords[1]]
             elif i[2] == 180:
-                amap[quords[0] - 1][qords[1]] = 0
+                amap[quords[0] - 1][quords[1]] = 0
                 quords = [quords[0] + 2,quords[1]]
             elif i[2] == 90:
-                amap[quords[0]][qords[1] + 1] = 0
+                amap[quords[0]][quords[1] + 1] = 0
                 quords = [quords[0],quords[1] + 2]
             elif i[2] == 270:
-                amap[quords[0]][qords[1] - 1] = 0
+                amap[quords[0]][quords[1] - 1] = 0
                 quords = [quords[0],quords[1] - 2]
     for i in amap:
         brain.print(i)
         brain.new_line()
+
 
